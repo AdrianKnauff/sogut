@@ -1,0 +1,22 @@
+{
+  "name": "AdrianKnauff/sogut",
+  "version": "0.1.0",
+  "description": "Base Component for all monoliths",
+  "authors": [
+    {
+      "name": "Adrian Knauff",
+      "email": "adrian.knauff@bwsolution.de"
+    }
+  ],
+  "require": {
+  },
+  "autoload": {
+    "psr-4": {
+      "Sogut\\": "src/"
+    }
+  },
+  "config": {
+    "disable-tls": true,
+    "secure-http": false
+  }
+}
