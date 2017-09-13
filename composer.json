@@ -2,6 +2,7 @@
   "name": "adrianknauff/sogut",
   "version": "0.1.0",
   "description": "Base Component for all monoliths",
+  "license": "MIT",
   "authors": [
     {
       "name": "Adrian Knauff",
