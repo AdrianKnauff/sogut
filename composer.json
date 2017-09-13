@@ -3,10 +3,12 @@
   "version": "0.1.0",
   "description": "Base Component for all monoliths",
   "license": "MIT",
+  "type": "library",
   "authors": [
     {
       "name": "Adrian Knauff",
-      "email": "adrian.knauff@bwsolution.de"
+      "email": "adrian.knauff@bwsolution.de",
+      "role": "Developer"
     }
   ],
   "require": {
