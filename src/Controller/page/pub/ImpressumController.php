@@ -1,9 +1,10 @@
 <?php
 
-namespace application\controller\page\pub;
+namespace Sogut\Controller\page\pub;
 
-use application\controller\page\pub\PublicPageController;
+use Sogut\Controller\page\pub\PublicPageController;
 use application\Controller;
+use Sogut\Core\Config;
 
 /**
  * Description of ImpressumController
@@ -19,8 +20,8 @@ class ImpressumController extends PublicPageController {
     }
 
     public function output() {
-        $this->title = "Impressum von " . Controller::$title;
-        $this->description = 'Das Impressum der Seite ' . Controller::$title;
+        $this->title = "Impressum von " .Config::getInstance()->title;
+        $this->description = 'Das Impressum der Seite ' . Config::getInstance()->title;
         parent::output();
     }
 

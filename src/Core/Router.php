@@ -2,6 +2,7 @@
 
 namespace Sogut\Core;
 
+use Sogut\Controller\page\pub\ImpressumController;
 use Sogut\Controller\page\pub\Error404Controller;
 use Sogut\Controller\page\pub\IndexController;
 
@@ -39,11 +40,11 @@ class Router
                 $controller->output();
                 die();
 
-//            case 'impressum':
-//                $Controller = new \application\Controller\page\pub\ImpressumController();
-//                $Controller->output();
-//                die();
-//
+            case 'impressum':
+                $Controller = new ImpressumController();
+                $Controller->output();
+                die();
+
 //            case 'datenschutz':
 //                $Controller = new \application\Controller\page\pub\DatenschutzController();
 //                $Controller->output();
