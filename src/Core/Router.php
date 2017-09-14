@@ -9,18 +9,18 @@ use Sogut\Controller\page\pub\Error404Controller;
 class Router
 {
 
-    private function getRelativeRequest(string $host)
+    private function getRelativeRequest(string $host) : string
     {
         return str_replace($host . '/', "", $this->getRequestedUrl());
     }
 
-    public function getRequestedUrl()
+    public function getRequestedUrl() : string
     {
         $actual_link = 'http' . (isset($_SERVER['HTTPS']) ? "s" : "") . "://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
         return $actual_link;
     }
 
-    public function getPath()
+    public function getPath() : string
     {
         $relativeRequest = $this->getRelativeRequest(Config::getInstance()->baseUrl);
         if (strpos($relativeRequest, "?") === 0) {

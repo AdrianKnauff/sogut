@@ -18,7 +18,7 @@ class Config
         $this->loadConfigFile();
     }
 
-    public static function getInstance()
+    public static function getInstance() : Config
     {
         if (empty(self::$instance)) {
             self::$instance = new Config();
@@ -26,7 +26,7 @@ class Config
         return self::$instance;
     }
 
-    public function __get(string $keyName)
+    public function __get(string $keyName) : string
     {
         return $this->values[$keyName];
     }

@@ -31,7 +31,7 @@ class MySQLConnection implements IDBConnection
     /**
      * @return PDO
      */
-    public function getDb()
+    public function getDb() : PDO
     {
         return $this->db;
     }

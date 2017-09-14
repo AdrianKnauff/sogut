@@ -18,7 +18,7 @@ class Application
     /**
      * @return MySQLConnection
      */
-    public function getConnection()
+    public function getConnection() : IDBConnection
     {
         return $this->connection;
     }
