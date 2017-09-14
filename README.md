@@ -3,5 +3,5 @@
 Base monolith package
 
 ````json
-{"stuff": "foobar"}
+{"stuff": "test"}
 ````
