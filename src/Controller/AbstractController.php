@@ -8,10 +8,10 @@ namespace Sogut\Controller;
 abstract class AbstractController {
 
     public $content = '';
-    public $loggedIn = FALSE;
-    public $isAdmin = FALSE;
-    public $requiresAdmin = FALSE;
-    public $user = FALSE;
+//    public $loggedIn = FALSE;
+//    public $isAdmin = FALSE;
+//    public $requiresAdmin = FALSE;
+//    public $user = FALSE;
     
     public function __construct() {
 //        $this->loggedIn = User::login_check();
