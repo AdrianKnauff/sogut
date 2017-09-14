@@ -26,7 +26,7 @@ class Config
         return self::$instance;
     }
 
-    public function __get($keyName)
+    public function __get(string $keyName)
     {
         return $this->values[$keyName];
     }

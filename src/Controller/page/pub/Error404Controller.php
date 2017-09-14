@@ -2,8 +2,6 @@
 
 namespace Sogut\Controller\page\pub;
 
-use Sogut\Controller\page\pub\PublicPageController;
-
 /**
  * Description of 404Controller
  *

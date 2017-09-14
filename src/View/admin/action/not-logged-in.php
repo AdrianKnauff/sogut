@@ -1,1 +1,0 @@
-Diese Aktion dürfen nur eingeloggte Mitglieder ausführen!

@@ -8,10 +8,11 @@ class Application
 {
     private $connection;
 
-    public function __construct()
+    public function __construct(IDBConnection $connection, Router $router)
     {
-        $this->connection = new MySQLConnection();
-        Router::route();
+        $this->connection = $connection;
+//        Router::route();
+        $router->route();
     }
 
     /**

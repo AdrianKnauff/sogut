@@ -1,8 +1,8 @@
 <?php
 
-namespace application\controller\page\admin;
+namespace Sogut\Controller\page\admin;
 
-use application\controller\page\admin\AdminPageController;
+use Sogut\Controller\page\admin\AdminPageController;
 
 /**
  * Description of IndexController

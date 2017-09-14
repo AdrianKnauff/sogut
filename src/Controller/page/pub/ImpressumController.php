@@ -2,8 +2,6 @@
 
 namespace Sogut\Controller\page\pub;
 
-use Sogut\Controller\page\pub\PublicPageController;
-use application\Controller;
 use Sogut\Core\Config;
 
 /**

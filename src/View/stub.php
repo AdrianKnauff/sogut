@@ -31,7 +31,6 @@ crossorigin="anonymous"></script>
 <?php include 'src/View/content/'.$this->content; ?>
 </div>
 </div>
-<?php include 'src/View/footer.php'; ?>
 <?php
     foreach ($this->scripts as $scriptUrl) {
         echo '<script src="'.$scriptUrl.'"></script>';

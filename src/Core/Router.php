@@ -2,27 +2,27 @@
 
 namespace Sogut\Core;
 
-use Sogut\Controller\page\pub\ImpressumController;
+//use Sogut\Controller\page\pub\ImpressumController;
 use Sogut\Controller\page\pub\Error404Controller;
-use Sogut\Controller\page\pub\IndexController;
+//use Sogut\Controller\page\pub\IndexController;
 
 class Router
 {
 
-    private static function getRelativeRequest($host)
+    private function getRelativeRequest(string $host)
     {
-        return str_replace($host . '/', "", self::getRequestedUrl());
+        return str_replace($host . '/', "", $this->getRequestedUrl());
     }
 
-    public static function getRequestedUrl()
+    public function getRequestedUrl()
     {
         $actual_link = 'http' . (isset($_SERVER['HTTPS']) ? "s" : "") . "://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
         return $actual_link;
     }
 
-    public static function getPath()
+    public function getPath()
     {
-        $relativeRequest = self::getRelativeRequest(Config::getInstance()->baseUrl);
+        $relativeRequest = $this->getRelativeRequest(Config::getInstance()->baseUrl);
         if (strpos($relativeRequest, "?") === 0) {
             return "";
         } else {
@@ -31,25 +31,19 @@ class Router
         }
     }
 
-    public static function route()
+    public function route()
     {
-        switch (self::getPath()) {
-            case '':
-
-                $controller = new IndexController();
-                $controller->output();
-                die();
-
-            case 'impressum':
-                $Controller = new ImpressumController();
-                $Controller->output();
-                die();
-
-//            case 'datenschutz':
-//                $Controller = new \application\Controller\page\pub\DatenschutzController();
+//        switch ($this->getPath()) {
+//            case '':
+//                $controller = new IndexController();
+//                $controller->output();
+//                die();
+//
+//            case 'impressum':
+//                $Controller = new ImpressumController();
 //                $Controller->output();
 //                die();
-        }
+//        }
 
         // 404
         $controller = new Error404Controller();

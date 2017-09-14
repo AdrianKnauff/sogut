@@ -1,8 +1,8 @@
 <?php
 
-namespace application\controller\action\pub;
+namespace Sogut\Controller\action\pub;
 
-use application\controller\action\AbstractActionController;
+use Sogut\Controller\action\AbstractActionController;
 
 /**
  * Description of PublicActionController

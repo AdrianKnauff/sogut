@@ -2,11 +2,7 @@
 
 namespace Sogut\Controller;
 
-use application\User;
-
 /**
- * Zuständig zur Feststellung des Users/Admins
- * 
  * @author Adri
  */
 abstract class AbstractController {

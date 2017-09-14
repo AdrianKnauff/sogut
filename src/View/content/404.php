@@ -1,6 +1,5 @@
 <?php
 
-use application\Controller;
 use Sogut\Core\Config;
 
 ?><h1>Fehler 404: Seite nicht gefunden</h1>

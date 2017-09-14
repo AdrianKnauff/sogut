@@ -1,8 +1,8 @@
 <?php
 
-namespace application\controller\action;
+namespace Sogut\Controller\action;
 
-use application\controller\AbstractController;
+use Sogut\Controller\AbstractController;
 
 /**
  * Description of AbstractActionController

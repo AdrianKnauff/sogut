@@ -1,8 +1,8 @@
 <?php
 
-namespace application\controller\action\admin;
+namespace Sogut\Controller\action\admin;
 
-use application\controller\action\AbstractActionController;
+use Sogut\Controller\action\AbstractActionController;
 
 /**
  * Description of AdminActionController
