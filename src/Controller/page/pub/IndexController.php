@@ -14,7 +14,6 @@ class IndexController extends PublicPageController {
     public function __construct() {
         parent::__construct();
         $this->content = 'index.php';
-        $this->navElem = 'index';
     }
 
     public function output() {

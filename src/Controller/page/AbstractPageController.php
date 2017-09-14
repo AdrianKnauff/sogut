@@ -16,9 +16,6 @@ abstract class AbstractPageController extends AbstractController {
     // metatags
     public $title = 'Title of your page';
     public $description = '';
-    // navigation
-    public $navElem = '';
-    public $showNav = TRUE;
 
     public $scripts = [];
     public $scriptsPlain = [];

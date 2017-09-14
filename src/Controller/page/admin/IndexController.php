@@ -14,8 +14,6 @@ class IndexController extends AdminPageController {
     public function __construct() {
         parent::__construct();
         $this->content = 'index.php';
-        $this->navElem = "home";
-        
     }
     
     public function output() {

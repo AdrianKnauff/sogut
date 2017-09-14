@@ -14,7 +14,6 @@ class ImpressumController extends PublicPageController {
     public function __construct() {
         parent::__construct();
         $this->content = 'impressum.php';
-        $this->navElem = 'impressum';
     }
 
     public function output() {
