@@ -1,9 +1,8 @@
 <?php
 
-namespace DAO\Database;
+namespace Sogut\Database;
 
 use Sogut\Core\IDBConnection;
-use Sogut\Core\MySQLConnection;
 use PDO;
 
 abstract class DAO
@@ -37,31 +36,4 @@ abstract class DAO
         $this->connection->getDb()->exec($sql);
     }
 
-//    public function deleteEntry($tableName, $primaryKeys)
-//    {
-//        $columns = $this->getColumns($tableName);
-//        $primaryColumns = [];
-//        foreach ($columns as $column) {
-//            if ($column['Key'] === "PRI") {
-//                $primaryColumns[] = $column['Field'];
-//            }
-//        }
-//
-//        $whereConditions = [];
-//        foreach ($primaryColumns as $primaryColumn) {
-//            $whereConditions[] = $primaryColumn . "=?";
-//        }
-//
-//        $stmt = $this->prepare("DELETE FROM $tableName WHERE " . join(" AND ", $whereConditions));
-//
-//        $stmt->execute($primaryKeys);
-//    }
-
-//    public function addEntry($table, $cols = [])
-//    {
-//        $stmt = $this->prepare("INSERT INTO $table (" . join(",", array_keys($cols)) . ") VALUES (" . self::placeholders($cols) . ")");
-//        $stmt->execute(array_values($cols));
-//
-//        return $this->connection->getDb()->lastInsertId();
-//    }
 }
