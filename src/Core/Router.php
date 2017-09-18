@@ -2,12 +2,10 @@
 
 namespace Sogut\Core;
 
-//use Sogut\Controller\page\pub\ImpressumController;
-use Sogut\Controller\page\pub\Error404Controller;
-//use Sogut\Controller\page\pub\IndexController;
-
 class Router
 {
+
+    protected $namespace = "";
 
     private function getRelativeRequest(string $host) : string
     {
@@ -33,21 +31,26 @@ class Router
 
     public function route()
     {
-//        switch ($this->getPath()) {
-//            case '':
-//                $controller = new IndexController();
-//                $controller->output();
-//                die();
-//
-//            case 'impressum':
-//                $Controller = new ImpressumController();
-//                $Controller->output();
-//                die();
-//        }
-
-        // 404
-        $controller = new Error404Controller();
+        $className =  $this->namespace . "\\".$this->convertToControllerClassName ( $this->getPath() );
+        $controller = new $className();
         $controller->output();
-        die();
+    }
+
+    //
+
+    /**
+     *  convention over configuration
+     *
+     * index_hallo_123 -> Indexhallo123Controller
+     *
+     * @param $path
+     * @return string
+     */
+    protected function convertToControllerClassName($path)
+    {
+        if(empty($path)){
+            return "IndexController";
+        }
+        return ucwords(str_replace("_", "", $path)) . 'Controller';
     }
 }

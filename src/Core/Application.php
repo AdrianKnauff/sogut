@@ -11,7 +11,6 @@ class Application
     public function __construct(IDBConnection $connection, Router $router)
     {
         $this->connection = $connection;
-//        Router::route();
         $router->route();
     }
 
