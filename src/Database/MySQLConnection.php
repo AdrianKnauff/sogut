@@ -16,7 +16,7 @@ class MySQLConnection implements IDBConnection
     {
         if (empty($this->db)) {
             try {
-                $this->db = new PDO('mysql:host=' . Config::getInstance()->host . ';dbname=' . Config::getInstance()->dbname . ';charset=utf8', Config::getInstance()->user, Config::getInstance()->pass);
+                $this->db = new PDO('mysql:host=' . Config::getInstance()->dbhost . ';dbname=' . Config::getInstance()->dbname . ';charset=utf8', Config::getInstance()->dbuser, Config::getInstance()->dbpass);
             } catch (PDOException $e) {
                 die("Error!:<br>" . $e->getMessage());
             }
