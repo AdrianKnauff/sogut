@@ -4,21 +4,14 @@ namespace Sogut\Core;
 
 use Sogut\Database\MySQLConnection;
 
+// TODO: da kann man dann auch gleich den Router benutzen und Application rauswerfen!
+
 class Application
 {
-//    private $connection;
 
-    public function __construct(/*IDBConnection $connection, */ Router $router)
+    public function __construct(Router $router)
     {
-//        $this->connection = $connection;
         $router->route();
     }
 
-    /**
-     * @return MySQLConnection
-     */
-//    public function getConnection() : IDBConnection
-//    {
-//        return $this->connection;
-//    }
 }
