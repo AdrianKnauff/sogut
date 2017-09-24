@@ -12,8 +12,8 @@ use Sogut\Core\Config;
     <title><?php echo htmlspecialchars( $this->title ); ?></title>
     <meta name="description" content="<?php echo htmlspecialchars( $this->description ); ?>">
     <script
-    src="https://code.jquery.com/jquery-3.1.1.min.js"
-    integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+    src="https://code.jquery.com/jquery-3.2.1.min.js"
+    integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
     crossorigin="anonymous"></script>
     <?php
         foreach ($this->css as $cssUrl) {
