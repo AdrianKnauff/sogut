@@ -7,7 +7,8 @@ class Config
     private $baseUrl;
     private $values;
     private static $instance;
-
+    private static $configFile;
+    
     /**
      * Config constructor.
      */
@@ -33,10 +34,11 @@ class Config
 
     public function loadConfigFile()
     {
-        $configFile = 'resources' . DIRECTORY_SEPARATOR . 'config.ini';
-        $configs = parse_ini_file($configFile, TRUE);
-
-//        $this->baseUrl = Router::getRequestedUrl();
+        $configs = parse_ini_file(self::$configFile, TRUE);
         $this->values = array_pop($configs);
+    }
+    
+    public static function setConfigFile($configFile) {
+        self::$configFile = $configFile;
     }
 }

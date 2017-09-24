@@ -2,7 +2,6 @@
 
 namespace Sogut\Core;
 
-
 interface IDBConnection
 {
     public function connect();

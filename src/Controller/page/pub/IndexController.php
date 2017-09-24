@@ -1,8 +1,8 @@
 <?php
 
 namespace Sogut\Controller\page\pub;
-use \Sogut\Core\Config;
 
+use \Sogut\Core\Config;
 
 /**
  * Description of IndexController
@@ -21,5 +21,4 @@ class IndexController extends PublicPageController {
         $this->description = 'Startseite von ' . Config::getInstance()->title;
         parent::output();
     }
-
 }

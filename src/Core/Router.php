@@ -4,7 +4,6 @@ namespace Sogut\Core;
 
 class Router
 {
-
     protected $namespace = "";
 
     private function getRelativeRequest(string $host) : string
@@ -36,8 +35,6 @@ class Router
         $controller->output();
     }
 
-    //
-
     /**
      *  convention over configuration
      *
@@ -51,6 +48,10 @@ class Router
         if(empty($path)){
             return "IndexController";
         }
-        return ucwords(str_replace("_", "", $path)) . 'Controller';
+        return str_replace(["_","-"], "", ucwords($path,"_- ")) . 'Controller';
+    }
+    
+    public function setNamespace($namespace) {
+        $this->namespace = $namespace;
     }
 }
