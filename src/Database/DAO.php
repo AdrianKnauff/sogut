@@ -42,4 +42,9 @@ abstract class DAO
         $this->connection = $connection;
     }
 
+    protected function fetchAll(string $sql, array $input_parameters = [], int $fetchStyle = PDO::FETCH_ASSOC):array {
+        $stmt = $this->prepare($sql);
+        $stmt->execute($input_parameters);
+        return $stmt->fetchAll($fetchStyle);
+    }
 }

@@ -9,9 +9,6 @@ class Config
     private static $instance;
     private static $configFile;
     
-    /**
-     * Config constructor.
-     */
     private function __construct()
     {
         $this->baseUrl = "";
