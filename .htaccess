@@ -1,0 +1,11 @@
+<IfModule mod_gzip.c>
+  mod_gzip_on yes
+</IfModule>
+RewriteEngine on
+
+RewriteCond %{HTTP_HOST} ^[^.]+\.[^.]+$
+RewriteCond %{HTTPS}s ^on(s)|
+RewriteRule ^(.*)$ http%1://www.%{HTTP_HOST}/$1 [L,R=301]
+
+RewriteCond %{REQUEST_URI} !/sitemap.xml
+RewriteRule !\.(eot|ttf|svg|pdf|js|ico|txt|gif|jpg|png|map|css|swf|flv|mov|mp4|htm|html|woff|woff2|data|ogg|odt)$ index.php
