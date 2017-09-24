@@ -16,7 +16,7 @@ use Sogut\Core\Config;
 require_once "./vendor/autoload.php";
 
 Config::setConfigFile('resources' . DIRECTORY_SEPARATOR . 'config.ini');
-$connection = new MySQLConnection();
+//$connection = new MySQLConnection();
 $router = new Router();
 $router->setNamespace("Sogut\Controller\page\pub");
-$app = new Application( $connection, $router );
+$app = new Application( /*$connection, */$router );

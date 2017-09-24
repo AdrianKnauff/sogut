@@ -36,4 +36,9 @@ abstract class DAO
         $this->connection->getDb()->exec($sql);
     }
 
+    public function setConnection(IDBConnection $connection)
+    {
+        $this->connection = $connection;
+    }
+
 }
