@@ -12,6 +12,7 @@ abstract class DAO
     public function __construct(IDBConnection $connection)
     {
         $this->connection = $connection;
+        $connection->connect();
     }
 
     public function count(string $tableName) : int
