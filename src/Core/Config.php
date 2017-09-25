@@ -40,7 +40,7 @@ class Config
         self::$configFile = $configFile;
     }
 
-    public static function __set(String $keyName, String $value)
+    public function __set(string $keyName, string $value)
     {
         $this->values[$keyName] = $value;
     }
