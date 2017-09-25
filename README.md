@@ -3,6 +3,5 @@
 Base monolith package
 
 ````json
-{"stuff": "test3michi"}
+{"stuff": "stuff"}
 ````
-hallo
