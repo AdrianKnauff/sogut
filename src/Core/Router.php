@@ -6,18 +6,18 @@ class Router
 {
     protected $namespace = "";
 
-    private function getRelativeRequest(string $host) : string
+    private function getRelativeRequest(string $host): string
     {
         return str_replace($host . '/', "", $this->getRequestedUrl());
     }
 
-    public function getRequestedUrl() : string
+    public function getRequestedUrl(): string
     {
         $actual_link = 'http' . (isset($_SERVER['HTTPS']) ? "s" : "") . "://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
         return $actual_link;
     }
 
-    public function getPath() : string
+    public function getPath(): string
     {
         $relativeRequest = $this->getRelativeRequest(Config::getInstance()->baseUrl);
         if (strpos($relativeRequest, "?") === 0) {
@@ -30,7 +30,7 @@ class Router
 
     public function route()
     {
-        $className =  $this->namespace . "\\".$this->convertToControllerClassName ( $this->getPath() );
+        $className = $this->namespace . "\\" . $this->convertToControllerClassName($this->getPath());
         $controller = new $className();
         $controller->output();
     }
@@ -45,13 +45,14 @@ class Router
      */
     protected function convertToControllerClassName($path)
     {
-        if(empty($path)){
+        if (empty($path)) {
             return "IndexController";
         }
-        return str_replace(["_","-"], "", ucwords($path,"_- ")) . 'Controller';
+        return str_replace(["_", "-"], "", ucwords($path, "_- ")) . 'Controller';
     }
-    
-    public function setNamespace($namespace) {
+
+    public function setNamespace($namespace)
+    {
         $this->namespace = $namespace;
     }
 }

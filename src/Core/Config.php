@@ -13,7 +13,6 @@ class Config
     {
         $this->baseUrl = "";
         $this->values = [];
-//        $this->loadConfigFile();
     }
 
     public static function getInstance(): Config
