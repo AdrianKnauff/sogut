@@ -31,12 +31,10 @@ class Router
     public function route()
     {
         $className = $this->namespace . "\\" . $this->convertToControllerClassName($this->getPath());
-        if(class_exists($className)) {
-            $controller = new $className();
-        } else {
-            $controller = $this->namespace . "\\" .Error404Controller;
+        if(!class_exists($className)) {
+            $className = $this->namespace . "\\Error404Controller";
         }
-        
+        $controller = new $className();
         $controller->output();
     }
 
