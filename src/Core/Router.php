@@ -31,7 +31,12 @@ class Router
     public function route()
     {
         $className = $this->namespace . "\\" . $this->convertToControllerClassName($this->getPath());
-        $controller = new $className();
+        if(class_exists($className)) {
+            $controller = new $className();
+        } else {
+            $controller = new \application\controller\page\pub\Error404Controller;
+        }
+        
         $controller->output();
     }
 
