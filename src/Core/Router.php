@@ -34,7 +34,7 @@ class Router
         if(class_exists($className)) {
             $controller = new $className();
         } else {
-            $controller = new \application\controller\page\pub\Error404Controller;
+            $controller = $this->namespace . "\\" .Error404Controller;
         }
         
         $controller->output();
